@@ -11,9 +11,9 @@ public class Driver {
 		
 		/* Static methods can be called without a tie to an object */
 		
-		Car car1 = new Car(Color.red, 2500, "Honda CRV");
-		Car car2 = new Car(Color.blue, 2000, "Lamborghini Aventador");
-		Car car3 = new Car(Color.gray, 4000, "Chevrolet Silverado");
+		Car car1 = new Car(Color.RED, 2500, "Honda CRV");
+		Car car2 = new Car(Color.BLUE, 2000, "Lamborghini Aventador");
+		Car car3 = new Car(Color.GRAY, 4000, "Chevrolet Silverado");
 		
 		System.out.println(car1.getID() + "\n" + car2.getID() + "\n" + car3.getID());
 		
