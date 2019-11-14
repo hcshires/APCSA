@@ -1,4 +1,3 @@
-import core.data.DataSource;
 
 public class Observation {
 
@@ -9,12 +8,20 @@ public class Observation {
 		location = loc;
 		temp_f = temp;
 	}
+	
+	public String getLocation() {
+		return location;
+	}
+	
+	public float getTemp() {
+		return temp_f;
+	}
 
 	public boolean colderThan(Observation other) {
 		return this.temp_f < other.temp_f;
 	}
 	
 	public String toString() {
-		return "The current temperature of " + location + " is " + temp_f;
+		return "The current temperature of " + location + " is " + temp_f + "F.";
 	}
 }
