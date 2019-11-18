@@ -3,10 +3,18 @@ public class Observation {
 
 	private String location;
 	private float temp_f;
+	private String weather;
+	private String windDeg;
 
 	public Observation(String loc, float temp) {
 		location = loc;
 		temp_f = temp;
+	}
+	
+	public Observation(float temp_f, String weather, String wind_degrees) {
+		this.temp_f = temp_f;
+		this.weather = weather;
+		this.windDeg = wind_degrees;
 	}
 	
 	public String getLocation() {
