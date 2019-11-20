@@ -39,6 +39,8 @@ public class WeatherStation {
 	public Observation currentWeather(String id) {
 		DataSource ds = DataSource.connect("http://weather.gov/xml/current_obs/" + id + ".xml").load();
 		ds.fetch("Observation", "temp_f", "weather", "wind_degrees");
+		System.out.println("This is a test");
+		return new Observation("lol", 0);
 	
 	}
 	
