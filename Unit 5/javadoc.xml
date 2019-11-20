@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project default="javadoc">
-    <target name="javadoc">
-        <javadoc access="public" author="true" classpath="." destdir="doc" doctitle="Java Segment Class" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" source="1.8" sourcefiles="src/Point.java,src/Segment.java,src/SegmentRunner.java,src/APLine.java,src/PA_51.java" sourcepath="src" splitindex="true" use="true" version="true"/>
-    </target>
-</project>
