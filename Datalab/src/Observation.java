@@ -11,7 +11,8 @@ public class Observation {
 		temp_f = temp;
 	}
 	
-	public Observation(float temp_f, String weather, String wind_degrees) {
+	public Observation(String id, float temp_f, String weather, String wind_degrees) {
+		this.location = id;
 		this.temp_f = temp_f;
 		this.weather = weather;
 		this.windDeg = wind_degrees;
@@ -23,6 +24,14 @@ public class Observation {
 	
 	public float getTemp() {
 		return temp_f;
+	}
+
+	public String getWeather() {
+		return weather;
+	}
+
+	public String getWindDeg() {
+		return windDeg;
 	}
 
 	public boolean colderThan(Observation other) {

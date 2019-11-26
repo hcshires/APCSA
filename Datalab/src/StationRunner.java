@@ -33,7 +33,10 @@ public class StationRunner {
 			}
 		}
 		
-		System.out.println(nameSouth + "is the farthest south at Lat: " + mostSouth);
+		System.out.println(nameSouth + "is the farthest south at Lat: " + mostSouth + "\n");
+		Observation ob = ws.currentWeather("KDSM");
+		System.out.println(ob);
+		System.out.println("Weather: " + ob.getWeather() + "\nWind: " + ob.getWindDeg());
 	}
 
 }
