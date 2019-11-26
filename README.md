@@ -1,5 +1,5 @@
-# APCSA
-Projects from AP Computer Science A 2019-20. My Junior year of High School
+# AP Computer Science A 2019-20 Class Code & Projects
+Projects from my Junior year's Computer Science course.
 
 Datalab Project Sources:
 - https://data.cdc.gov/api/views/e8kx-wbww/rows.xml?accessType=DOWNLOAD
