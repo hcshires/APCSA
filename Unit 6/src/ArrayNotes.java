@@ -47,6 +47,7 @@ public class ArrayNotes {
 				System.out.println(num);
 			}
 		}
+		
 	}
 	
 	/* Answers to AP:
