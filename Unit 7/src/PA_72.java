@@ -17,7 +17,6 @@ public class PA_72 {
 			System.out.print(num + " ");
 		}
 		System.out.println("\n--------------------");
-		
 		int length = ints.size();
 		
 		// Swap the first and last values

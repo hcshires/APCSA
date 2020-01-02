@@ -18,4 +18,3 @@ public class Mountain {
 		return false;
 	}
 }
-c
