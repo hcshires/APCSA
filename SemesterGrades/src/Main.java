@@ -7,52 +7,36 @@ class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		ArrayList<Student> students = new ArrayList<Student>();
+		ArrayList<String> names = new ArrayList<String>();
 		Scanner sc = new Scanner(new File("grades03.txt"));
 
-		Student s1 = new Student("Henry", "Shires");
-		Student s2 = new Student("PD", "Dahal");
-		Student s3 = new Student("Levi", "Janssen");
-		Student s4 = new Student("Henry", "Shires");
-		Student s5 = new Student("Xiangheng", "Li");
-
-		s1.addGrade(1, 90.0);
-		s1.addGrade(1, 80.0);
-		s1.addGrade(2, 85.6);
-		s1.addGrade(2, 75.9);
-		s1.addGrade(2, 56.8);
-		s1.addGrade(2, 100.0);
-
-		students.add(s1);
-		students.add(s2);
-		students.add(s3);
-		students.add(s4);
-		students.add(s5);
-		// students.add(s6);
-
-		s1.avgGrade(2);
-		s1.avgGrade(1);
-		s1.avgGrade(3);
-
 		while (sc.hasNextLine()) {
+			Student x;
 			String first = sc.next(); // First name
 			String last = sc.next(); // Last name
 			int standard = sc.nextInt(); // Standard
 			double grade = sc.nextDouble(); // Grade
 			
-			
-
-			Student x = new Student(first, last);
-
-			x.addGrade(standard, grade);
-			x.avgGrade(standard);
-			students.add(x);
-
+			if (names.indexOf(first + last) == -1) {
+				x = new Student(first, last);
+				students.add(x);
+				names.add(first + last);
+			} else {
+				for (int i = 0; i < students.size(); i++) {
+					if (students.get(i).getFirst().equals(first) && students.get(i).getLast().equals(last)) {
+						students.get(i).addGrade(standard, grade);
+						students.get(i).avgGrade(standard);
+					}
+				}
+			}
 		}
+		
+		students.get(20).removeBadScores(); // Fix a random student's grades
 
 		ClassSection section = new ClassSection(students);
 		section.printRoster();
 
-		System.out.println("Class Size: " + section.classSize() + "students");
+		System.out.println("\nClass Size: " + section.classSize() + " students");
 
 	}
 }
