@@ -71,28 +71,38 @@ public class SortingAssignment {
 
 	}
 
+	/**
+	 * Sorts an ArrayList<Integer> in numerical order by locating the smallest number 
+	 * each iteration and placing it at the index the iteration began at.
+	 * @param nums
+	 */
 	public static void SelectionSort(ArrayList<Integer> nums) {
 		for (int i = 0; i < nums.size(); i++) {
 			int start = nums.get(i);
+			int temp = start;
 			for (int j = i; j < nums.size(); j++) {
 				if (nums.get(j) < start) {
-					int temp = nums.get(j);
-					nums.set(i, temp);
-					nums.set(j, start);
-					start = temp;
+					temp = nums.get(j); // Grab the smallest so far
+					nums.set(j, start); // Put the current number back
+					start = temp; // Reset the current number to the smallest so far
 				}
 			}
+			nums.set(i, temp); // Don't swap until the smallest value is found
 		}
 
 	}
 
+	/**
+	 * Sorts an ArrayList<Integer> in numerical order by 
+	 * @param nums
+	 */
 	public static void InsertionSort(ArrayList<Integer> nums) {
 		for (int i = 0; i < nums.size(); i++) {
-			for (int j = i; j > 0; j--) {
-				if (nums.get(j) < nums.get(j - 1)) {		
+			for (int j = i; j > 0; j--) { // Skips to index 1 or "second value"
+				if (nums.get(j) < nums.get(j - 1)) { // If the right value is less than the left
 					int temp = nums.get(j - 1);
 					nums.set(j - 1, nums.get(j));
-					nums.set(j, temp);
+					nums.set(j, temp); // Swap
 				}
 			}
 		}
