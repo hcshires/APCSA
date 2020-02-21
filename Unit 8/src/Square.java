@@ -9,6 +9,10 @@ public class Square {
 		num = n;
 	}
 	
+	public boolean isBlack() {
+		return black;
+	}
+
 	public String toString() {
 		if (black) return "#";
 		

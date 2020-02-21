@@ -6,23 +6,25 @@ import java.awt.Dimension;
 public class CrosswordRunner extends JPanel {
 	private static final int RECT_X = 5; // X coord
 	private static final int RECT_Y = 5; // Y coord
-	private static final int RECT_WIDTH = 20;
+	private static final int RECT_WIDTH = 40;
 	private static final int RECT_HEIGHT = RECT_WIDTH; // a square
+	
+	private static boolean[][] blacksquares = { 
+			{ true, false, false, true, true, true, false, false, false },
+			{ false, false, false, false, true, false, false, false, false },
+			{ false, false, false, false, false, false, true, true, true },
+			{ false, false, true, false, false, false, true, false, false },
+			{ true, true, true, false, false, false, false, false, false },
+			{ false, false, false, false, true, false, false, false, false },
+			{ false, false, false, true, true, true, false, false, true } 
+			}; // all the squares that are black (true) and white (false)
+	
+	private static Crossword cw = new Crossword(blacksquares);
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		boolean[][] blacksquares = { 
-				{ true, false, false, true, true, true, false, false, false },
-				{ false, false, false, false, true, false, false, false, false },
-				{ false, false, false, false, false, false, true, true, true },
-				{ false, false, true, false, false, false, true, false, false },
-				{ true, true, true, false, false, false, false, false, false },
-				{ false, false, false, false, true, false, false, false, false },
-				{ false, false, false, true, true, true, false, false, true } 
-				}; // all the squares that are black (true) and white (false)
-
-		Crossword cw = new Crossword(blacksquares);
+		cw.getPuzzle();
+		
 		
 		// System.out.println(cw);
 		
@@ -40,11 +42,28 @@ public class CrosswordRunner extends JPanel {
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		// draw rectangle
+		
+		Square[][] puzzle = cw.getPuzzle();
+		
+		/* Draw Puzzle */
 		g.setColor(Color.BLACK);
-		// g.drawRect(RECT_X, RECT_Y, RECT_WIDTH, RECT_HEIGHT);
-		g.fillRect(RECT_X, RECT_Y, RECT_WIDTH, RECT_HEIGHT);
-		g.drawRect(RECT_X + 50, RECT_Y, RECT_WIDTH, RECT_HEIGHT);
+		int counterX = 0;
+		int counterY = 0;
+		for (int r = 0; r < puzzle.length; r++) {
+			for (int c = 0; c < puzzle[0].length; c++) {
+				if (puzzle[r][c].isBlack()) {
+					g.fillRect(RECT_X + counterX, RECT_Y + counterY, RECT_WIDTH, RECT_HEIGHT);
+				} else {
+					g.drawRect(RECT_X + counterX, RECT_Y + counterY, RECT_WIDTH, RECT_HEIGHT);
+				}
+				counterX += RECT_WIDTH;
+			}
+			counterX = 0;
+			counterY += RECT_HEIGHT;
+		}
+		
+		/* Add labels */
+		
 	}
 	
 	@Override

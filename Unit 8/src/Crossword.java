@@ -34,6 +34,10 @@ public class Crossword {
 		
 	}
 	
+	public Square[][] getPuzzle() {
+		return puzzle;
+	}
+
 	private boolean toBeLabeled(int r, int c, boolean[][] blackSquares) {
 		if (blackSquares[r][c] == true) { // black squares don't get numbered
 			return false;
