@@ -12,6 +12,10 @@ public class Square {
 	public boolean isBlack() {
 		return black;
 	}
+	
+	public int getLabel() {
+		return num;
+	}
 
 	public String toString() {
 		if (black) return "#";
