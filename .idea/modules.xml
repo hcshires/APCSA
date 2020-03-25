@@ -5,12 +5,15 @@
       <module fileurl="file://$PROJECT_DIR$/Datalab/Datalab.iml" filepath="$PROJECT_DIR$/Datalab/Datalab.iml" />
       <module fileurl="file://$PROJECT_DIR$/Elevens/Elevens.iml" filepath="$PROJECT_DIR$/Elevens/Elevens.iml" />
       <module fileurl="file://$PROJECT_DIR$/SemesterGrades/SemesterGrades.iml" filepath="$PROJECT_DIR$/SemesterGrades/SemesterGrades.iml" />
+	  <module fileurl="file://$PROJECT_DIR$/Steganography/Steganography.iml" filepath="$PROJECT_DIR$/Steganography/Steganography.iml" />
+	  <module fileurl="file://$PROJECT_DIR$/Tanks/Tanks.iml" filepath="$PROJECT_DIR$/Tanks/Tanks.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 2/Unit 2.iml" filepath="$PROJECT_DIR$/Unit 2/Unit 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 3/Unit 3.iml" filepath="$PROJECT_DIR$/Unit 3/Unit 3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 4/Unit 4.iml" filepath="$PROJECT_DIR$/Unit 4/Unit 4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 5/Unit 5.iml" filepath="$PROJECT_DIR$/Unit 5/Unit 5.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 6/Unit 6.iml" filepath="$PROJECT_DIR$/Unit 6/Unit 6.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 7/Unit 7.iml" filepath="$PROJECT_DIR$/Unit 7/Unit 7.iml" />
+	  <module fileurl="file://$PROJECT_DIR$/Unit 8/Unit 8.iml" filepath="$PROJECT_DIR$/Unit 8/Unit 8.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unit 9/Unit 9.iml" filepath="$PROJECT_DIR$/Unit 9/Unit 9.iml" />
     </modules>
   </component>
