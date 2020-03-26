@@ -4,4 +4,11 @@
 
 public class BassetHound extends Dog {
 
+    public BassetHound() {
+        super();
+    }
+
+    public BassetHound(String name, int age, double weight) {
+        super(name, age, weight); // Passes formal parameters to super constructor, calls constructor in superclass
+    }
 }
