@@ -1,3 +1,7 @@
+import Animal.BassetHound;
+import Animal.Dog;
+import Animal.Hippo;
+
 public class Unit9Notes {
     /* Inheritance: Sharing code between classes
        Inheritance avoids duplicate code and defines a common protocol for a group of classes
@@ -9,7 +13,7 @@ public class Unit9Notes {
     public static void main(String[] args) {
         /* Defining the objects is the client. Asking from the server for information */
 
-        // myDog is an example/type of Dog, it is a subclass of Dog and inherits Dog's properties (IS-A Relationship)
+        // myDog is an example/type of Animal.Dog, it is a subclass of Animal.Dog and inherits Animal.Dog's properties (IS-A Relationship)
 
         /* This doesn't work if we ONLY inherit the super constructor
         * We used an empty super() to pass to the DEFAULT super constructor. If you use overloaded constructors you MUST include a default
@@ -37,13 +41,26 @@ public class Unit9Notes {
          */
 
         // CANNOT do this without specifying an overloaded constructor in subclass
-        // In this case, we used super() in the subclass, to pass our parameters to the super constructor in "Dog"
+        // In this case, we used super() in the subclass, to pass our parameters to the super constructor in "Animal.Dog"
         BassetHound myDog2 = new BassetHound("Beau", 7, 35.4);
 
-        /** Hippo Example **/
+        /** Animal.Hippo Example **/
         Hippo h1 = new Hippo();
         Hippo h2 = new Hippo("Hippopotamus amphibious", "Hippopotamus");
         System.out.println(h1);
         System.out.println(h2);
+
+        /** Overriding vs Overloading
+         * Overriding - Same method signature, diferent behavior within related classes
+         * Must have same number of parameters
+         * "Runtime polymorphism"
+         * Used to implement inheritance
+         * Example: an object that has it's own .equals() or toString() overrides the superclass's equals() or toString()
+         *
+         * Overloading - Different constructors or methods by same name within classes or related classes
+         * Must have different number of parameters
+         * Compile-time polymorphism
+         * Used to implement methods and constructors
+         */
     }
- }
+}

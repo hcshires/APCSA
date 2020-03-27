@@ -1,3 +1,5 @@
+package Animal;
+
 public class WildAnimal extends Animal {
 
     public WildAnimal() {

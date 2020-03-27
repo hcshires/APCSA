@@ -1,4 +1,6 @@
-/** BassetHound and other classes become extensions of the Dog class.
+package Animal;
+
+/** Animal.BassetHound and other classes become extensions of the Animal.Dog class.
  * Because they are extensions, they inherit all properties and methods of the dog class
  * **/
 
