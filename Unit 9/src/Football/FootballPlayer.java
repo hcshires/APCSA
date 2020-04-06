@@ -12,5 +12,18 @@ public class FootballPlayer {
         System.out.println("I play football!");
     }
 
+    public void setWeight(double w) {
+        weight = w;
+    }
+
+    public void setSpeed(double s) {
+        speed = s;
+    }
+
+    public void run() {
+        System.out.println("Huff huff puff...");
+    }
+
+
 
 }

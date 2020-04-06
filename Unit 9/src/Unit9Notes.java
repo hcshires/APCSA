@@ -1,8 +1,6 @@
-import Animal.BassetHound;
-import Animal.Dog;
-import Animal.Hippo;
-import Football.FootballPlayer;
-import Football.Lineman;
+import Animal.*;
+import Football.*;
+import People.*;
 
 public class Unit9Notes {
     /* Inheritance: Sharing code between classes
@@ -69,5 +67,17 @@ public class Unit9Notes {
         Lineman l1 = new Lineman();
 
         FootballPlayer f2 = new Lineman(); // Polymorphism - All Lineman are FootballPlayers - Non-symmetrical, "is-a" relationship
+        DefensivePlayer df1 = new DefensivePlayer();
+        Linebacker lb1 = new Linebacker();
+
+        f1.setSpeed(5);
+        l1.run();
+        df1.setWeight(225);
+        lb1.run();
+
+        Person p1 = new Person("Henry", "July 6, 2003");
+        Student s1 = new Student(p1.getName(), p1.getBirthday(), 11, 4.13); // Dumb code. Don't be stupid
+
+        System.out.println(s1);
     }
 }
