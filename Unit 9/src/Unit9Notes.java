@@ -68,6 +68,6 @@ public class Unit9Notes {
         FootballPlayer f1 = new FootballPlayer();
         Lineman l1 = new Lineman();
 
-        FootballPlayer f2 = new Lineman(); // Polymorphism - All Lineman are FootballPlayers
+        FootballPlayer f2 = new Lineman(); // Polymorphism - All Lineman are FootballPlayers - Non-symmetrical, "is-a" relationship
     }
 }
