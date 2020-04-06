@@ -1,6 +1,8 @@
 import Animal.BassetHound;
 import Animal.Dog;
 import Animal.Hippo;
+import Football.FootballPlayer;
+import Football.Lineman;
 
 public class Unit9Notes {
     /* Inheritance: Sharing code between classes
@@ -62,5 +64,10 @@ public class Unit9Notes {
          * Compile-time polymorphism
          * Used to implement methods and constructors
          */
+
+        FootballPlayer f1 = new FootballPlayer();
+        Lineman l1 = new Lineman();
+
+        FootballPlayer f2 = new Lineman(); // Polymorphism - All Lineman are FootballPlayers
     }
 }
