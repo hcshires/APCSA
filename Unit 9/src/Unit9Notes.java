@@ -50,6 +50,24 @@ public class Unit9Notes {
         System.out.println(h1);
         System.out.println(h2);
 
+        /** FootballPlayer Example **/
+        FootballPlayer f1 = new FootballPlayer();
+        Lineman l1 = new Lineman();
+
+        FootballPlayer f2 = new Lineman(); // Polymorphism - All Lineman are FootballPlayers - Non-symmetrical, "is-a" relationship
+        DefensivePlayer df1 = new DefensivePlayer("Aidan Feldmann", 05, 2);
+        Linebacker lb1 = new Linebacker("Aaron Rodgers", 21, 5);
+
+        f1.setSpeed(5);
+        l1.run();
+        df1.setWeight(225);
+        lb1.run();
+
+        Person p1 = new Person("Henry", "July 6, 2003");
+        Student s1 = new Student(p1.getName(), p1.getBirthday(), 11, 4.13);
+
+        System.out.println(s1);
+
         /** Overriding vs Overloading
          * Overriding - Same method signature, diferent behavior within related classes
          * Must have same number of parameters
@@ -63,21 +81,9 @@ public class Unit9Notes {
          * Used to implement methods and constructors
          */
 
-        FootballPlayer f1 = new FootballPlayer();
-        Lineman l1 = new Lineman();
+        f1.action();
+        df1.action();
+        lb1.action();
 
-        FootballPlayer f2 = new Lineman(); // Polymorphism - All Lineman are FootballPlayers - Non-symmetrical, "is-a" relationship
-        DefensivePlayer df1 = new DefensivePlayer();
-        Linebacker lb1 = new Linebacker();
-
-        f1.setSpeed(5);
-        l1.run();
-        df1.setWeight(225);
-        lb1.run();
-
-        Person p1 = new Person("Henry", "July 6, 2003");
-        Student s1 = new Student(p1.getName(), p1.getBirthday(), 11, 4.13); // Dumb code. Don't be stupid
-
-        System.out.println(s1);
     }
 }
