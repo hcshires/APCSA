@@ -37,13 +37,10 @@ public class SpinningEnemy extends Enemy {
 
     @Override
     public void draw(Graphics g) {
-
         super.draw(g);
         
         g.setColor(Color.BLACK);
         g.fillOval(centerX-5, centerY-5, 10, 10);
     
     }
-
-
 }
